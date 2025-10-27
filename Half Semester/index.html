@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Goal Tracker Pro</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+</head>
+<body>
+
+<h1>Goal Tracker Pro</h1>
+<button id="exportBtn" title="Export and download your goals">Export as PDF</button>
+
+<section class="academic">
+  <h2>Academic Goals</h2>
+  <div class="progress-container"><div class="progress-bar" id="academicProgress"></div></div>
+  <ul id="academicList"></ul>
+  <div>
+    <input type="text" id="academicInput" placeholder="Add new academic goal..." />
+    <button class="add-goal" onclick="addGoal('academic')">Add</button>
+  </div>
+
+  <div class="timetable-section">
+    <h3>Academic Timetable</h3>
+    <table id="academicTimetable">
+      <thead>
+        <tr>
+          <th>Day</th>
+          <th>Subject/Activity</th>
+          <th>Time</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+    <div class="timetable-inputs">
+      <input type="text" id="dayInput" placeholder="e.g. Monday" />
+      <input type="text" id="subjectInput" placeholder="Subject or activity" />
+      <input type="text" id="timeInput" placeholder="Time (e.g. 9am–11am)" />
+      <button onclick="addTimetable()">Add to Timetable</button>
+    </div>
+  </div>
+</section>
+
+<section class="spiritual">
+  <h2>Spiritual & Fellowship Goals</h2>
+  <div class="progress-container"><div class="progress-bar" id="spiritualProgress"></div></div>
+  <ul id="spiritualList"></ul>
+  <div>
+    <input type="text" id="spiritualInput" placeholder="Add new spiritual goal..." />
+    <button class="add-goal" onclick="addGoal('spiritual')">Add</button>
+  </div>
+</section>
+
+<section class="financial">
+  <h2>Financial Discipline</h2>
+  <div class="progress-container"><div class="progress-bar" id="financialProgress"></div></div>
+  <ul id="financialList"></ul>
+  <div>
+    <input type="text" id="financialInput" placeholder="Add new financial goal..." />
+    <button class="add-goal" onclick="addGoal('financial')">Add</button>
+  </div>
+
+  <div class="budget-input">
+    <label for="weeklyFoodBudget">Food spending this week (₦):</label>
+    <input type="number" id="weeklyFoodBudget" min="0" step="100" placeholder="e.g. 18000" />
+    <button class="budget-check" onclick="checkBudget()">Check Budget</button>
+  </div>
+  <p class="budget-status" id="budgetStatus"></p>
+</section>
+
+<section class="personal">
+  <h2>Personal Care & Lifestyle</h2>
+  <div class="progress-container"><div class="progress-bar" id="personalProgress"></div></div>
+  <ul id="personalList"></ul>
+  <div>
+    <input type="text" id="personalInput" placeholder="Add new personal goal..." />
+    <button class="add-goal" onclick="addGoal('personal')">Add</button>
+  </div>
+</section>
+
+<footer class="site-footer">@ProTech 2025</footer>
+<script src="script.js"></script>
+</body>
+</html>

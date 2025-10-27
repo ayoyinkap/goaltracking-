@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  max-width: 1000px;
+  margin: 30px auto;
+  background: linear-gradient(135deg, #f0f4ff 0%, #d9e8ff 100%);
+  color: #222;
+  padding: 20px 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+h1 { text-align:center;color:#34495e;margin-bottom:20px;font-weight:700; }
+
+section {
+  background:white;border-radius:10px;padding:20px 25px;margin-bottom:30px;
+  box-shadow:0 6px 15px rgb(0 0 0 / 0.1);
+}
+h2 { margin-bottom:10px;border-bottom:3px solid;padding-bottom:6px;font-weight:600; }
+.academic h2 { border-color:#e67e22;color:#d35400; }
+.spiritual h2 { border-color:#8e44ad;color:#71368a; }
+.financial h2 { border-color:#27ae60;color:#1e8449; }
+.personal h2 { border-color:#c0392b;color:#922b21; }
+
+ul { list-style:none;padding-left:0;max-height:240px;overflow-y:auto;margin-bottom:10px; }
+li {
+  display:flex;flex-direction:column;gap:4px;background:#f8f9fa;
+  padding:10px;border-radius:8px;margin-bottom:12px;animation:fadeIn 0.4s ease forwards;
+}
+.goal-top { display:flex;align-items:center;gap:10px; }
+.goal-actions { display:flex;gap:6px;margin-top:6px; }
+button.edit,button.delete {
+  border:none;padding:4px 8px;border-radius:5px;color:white;cursor:pointer;font-size:0.85em;
+}
+button.edit { background:#3498db; }
+button.delete { background:#e74c3c; }
+button.edit:hover { background:#2980b9; }
+button.delete:hover { background:#c0392b; }
+
+.goal-notes {
+  width:100%;min-height:40px;padding:6px;border:1px solid #ccc;border-radius:5px;
+  font-size:0.9em;resize:vertical;
+}
+.timestamp { font-size:0.8em;color:#777; }
+
+.progress-container { background:#ecf0f1;border-radius:15px;overflow:hidden;height:18px;margin-bottom:18px; }
+.progress-bar {
+  height:100%;background:linear-gradient(90deg,#3498db,#8e44ad);
+  width:0%;transition:width 0.6s ease-in-out;border-radius:15px;
+}
+
+button.add-goal,button.budget-check {
+  padding:7px 16px;font-weight:600;border:none;color:white;border-radius:7px;
+  cursor:pointer;transition:background-color 0.3s ease;
+}
+button.add-goal { background:#3498db; }
+button.add-goal:hover { background:#2980b9; }
+button.budget-check { background:#27ae60; }
+button.budget-check:hover { background:#1e8449; }
+
+.budget-input { display:flex;align-items:center;gap:10px;margin-top:12px;flex-wrap:wrap; }
+.budget-status { margin-top:12px;font-weight:700; }
+
+/* Timetable */
+.timetable-section { margin-top:20px; }
+.timetable-section table { width:100%;border-collapse:collapse;margin-bottom:10px; }
+.timetable-section th,.timetable-section td {
+  border:1px solid #ddd;padding:8px;text-align:left;
+}
+.timetable-section th { background-color:#3498db;color:white; }
+.timetable-inputs { display:flex;flex-wrap:wrap;gap:8px;margin-top:8px; }
+.timetable-inputs input {
+  padding:6px;border:1px solid #ccc;border-radius:4px;
+}
+
+#exportBtn {
+  display:block;margin:0 auto 40px;padding:12px 30px;background:#34495e;color:white;
+  font-weight:700;border:none;border-radius:10px;cursor:pointer;
+}
+#exportBtn:hover { background:#2c3e50; }
+
+@keyframes fadeIn {
+  from{opacity:0;transform:translateY(5px);}
+  to{opacity:1;transform:translateY(0);}
+}
+
+.site-footer { text-align:center;margin-top:40px;color:#7f8c8d;font-size:0.9em; }
+
+/* Timetable delete button */
+.timetable-delete {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 8px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.85em;
+}
+.timetable-delete:hover {
+  background: #c0392b;
+}
